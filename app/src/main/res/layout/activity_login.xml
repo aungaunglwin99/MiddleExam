@@ -21,7 +21,7 @@
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp">
+        android:layout_margin="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etUser"
@@ -39,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@id/tilUser"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp">
+        android:layout_margin="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPass"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@id/tilPass"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp"/>
+        android:layout_margin="16dp"/>
 
     <!-- GO TO REGISTER -->
     <com.google.android.material.button.MaterialButton
@@ -69,6 +69,6 @@
         app:layout_constraintTop_toBottomOf="@id/btnLogin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp"/>
+        android:layout_margin="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
