@@ -12,12 +12,17 @@ import com.google.android.material.textfield.TextInputEditText
 
 class LoginSystem : AppCompatActivity() {
     lateinit var db: DatabaseHelper
+    private lateinit var toolbar: Toolbar
 
     lateinit var btRegister: MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_system)
+
+        toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.title = "Register"
 
         db = DatabaseHelper(this)
 

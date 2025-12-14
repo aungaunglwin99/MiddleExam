@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
-import android.widget.Toolbar
+import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.loginsystem.DatabaseHelper
 import com.google.android.material.textfield.TextInputEditText
@@ -20,6 +20,10 @@ class Login : AppCompatActivity() {
         val etUser = findViewById<TextInputEditText>(R.id.etUser)
         val etPass = findViewById<TextInputEditText>(R.id.etPass)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
+
+        toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.title = "Login"
 
         btnLogin.setOnClickListener {
             val id = db.login(etUser.text.toString(), etPass.text.toString())
