@@ -8,6 +8,7 @@
     tools:context=".HomeActivity">
 
     <include
+        android:id="@+id/toolbar"
         layout="@layout/toolbar"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -17,13 +18,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Write status"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintTop_toBottomOf="@id/tbToolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnUpload"
+        android:id="@+id/btUpload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="UPLOAD"
@@ -32,12 +33,12 @@
         android:layout_marginTop="12dp"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnUpdate"
+        android:id="@+id/btUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="UPDATE"
         app:layout_constraintTop_toBottomOf="@id/etStatus"
-        app:layout_constraintStart_toEndOf="@id/btnUpload"
+        app:layout_constraintStart_toEndOf="@id/btUpload"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"/>
 
@@ -46,12 +47,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="No status yet"
-        app:layout_constraintTop_toBottomOf="@id/btnUpload"
+        app:layout_constraintTop_toBottomOf="@id/btUpload"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnRemove"
+        android:id="@+id/btRemove"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="REMOVE"

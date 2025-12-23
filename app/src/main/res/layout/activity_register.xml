@@ -6,13 +6,14 @@
     android:layout_height="match_parent">
 
     <include
+        android:id="@+id/toolbar"
         layout="@layout/toolbar"
         app:layout_constraintTop_toTopOf="parent"/>
 
 
     <!-- Username -->
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilUser"
+        android:id="@+id/tiUsername"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Username"
@@ -22,25 +23,25 @@
         android:layout_margin="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etUser"
+            android:id="@+id/etUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Password -->
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilPass"
+        android:id="@+id/tiPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Password"
         app:endIconMode="password_toggle"
-        app:layout_constraintTop_toBottomOf="@id/tilUser"
+        app:layout_constraintTop_toBottomOf="@id/tiUsername"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPass"
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"/>
@@ -48,18 +49,18 @@
 
     <!-- Confirm Password -->
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilConfirm"
+        android:id="@+id/tiCPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Confirm Password"
         app:endIconMode="password_toggle"
-        app:layout_constraintTop_toBottomOf="@id/tilPass"
+        app:layout_constraintTop_toBottomOf="@id/tiPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etConfirm"
+            android:id="@+id/etCPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"/>
@@ -67,25 +68,43 @@
 
     <!-- REGISTER -->
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnRegister"
+        android:id="@+id/btRegister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="REGISTER"
-        app:layout_constraintTop_toBottomOf="@id/tilConfirm"
+        app:layout_constraintTop_toBottomOf="@id/tiCPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="16dp"/>
 
     <!-- GO TO LOGIN -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnGoLogin"
-        android:layout_width="0dp"
+
+    <LinearLayout
+        android:id="@+id/llGoToRegister"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ALREADY HAVE ACCOUNT? LOGIN"
-        android:textAllCaps="false"
-        app:layout_constraintTop_toBottomOf="@id/btnRegister"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="horizontal"
+        android:gravity="end"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btRegister">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Already have an account?" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btGoToLogin"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:textAllCaps="false"
+            android:layout_height="wrap_content"
+            android:text="Login" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
